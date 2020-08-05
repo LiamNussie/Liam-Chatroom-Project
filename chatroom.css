@@ -1,0 +1,36 @@
+body {
+    background: #352f5b;
+}
+.container {
+    max-width: 600px;
+}
+.btn {
+    background: #626274;
+    color: white;
+    outline: none !important;
+    box-shadow: none !important;
+}
+.btn:focus {
+    outline: none !important;
+}
+h1,
+.instruction {
+    color: white;
+}
+.username {
+    font-weight: bold;
+    color: #352f5b;
+}
+.time {
+    font-size: 0.6em;
+    color: #999;
+    
+}
+.update-mssg {
+    color: white;
+    text-align: center;
+    margin: 20px auto;
+}
+.highlight {
+    background-color: rgb(97, 97, 202);
+}

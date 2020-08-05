@@ -1,0 +1,87 @@
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Liam Chat</title>
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.13.1/css/all.css" integrity="sha384-xxzQGERXS00kBmZW/6qxqJPyxW3UR0BPsL4c8ILaIWXva5kFi7TxkIIaMiKtqV1Q" crossorigin="anonymous">
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+        <link rel="stylesheet" href="chatroom.css">
+    </head>
+
+    <body>
+        
+        <!-- Container & Title -->
+        <div class="container my-4">
+            <h1 class="my-4 text-center">Liam Chat</h1>
+        
+        <!-- Buttons for chatrooms -->
+            <div class="chat-rooms mb-3 text-center">
+                <div class="my-2 instruction">Choose a chatroom</div>
+                <button class="btn room-btn default-room" id="general">#general</button>
+                <button class="btn room-btn" id="sports">#sports</button>
+                <button class="btn room-btn" id="gaming">#gaming</button>
+                <button class="btn room-btn" id="music">#music</button>
+                <button class="btn room-btn" id="lifestyle">#lifestyle</button>
+            </div>
+
+        <!-- Chat-list / window -->
+            <div class="chat-window">
+                <ul class="chat-list list-group"></ul>
+            </div>
+
+        <!-- new chat form -->
+            <form class="new-chat my-3">
+                <div class="input-group">
+                        <div class="input-group-prepend">
+                            <div class="input-group-text">Your message:</div>
+                        </div>
+                    <input type="text" class="form-control" id="message" required>
+                    <div class="input-group-append">
+                        <input type="submit" class="btn" value="send">
+                    </div>
+                </div>
+            </form>
+
+        <!-- update name form -->
+            <form class="new-name my-3">
+                <div class="input-group">
+                    <div class="input-group-prepend">
+                        <div class="input-group-text">Update username:</div>
+                    </div>
+                    <input type="text" class="form-control" id="name" required>
+                    <div class="input-group-append">
+                        <input type="submit" class="btn" value="update">
+                    </div>
+                </div>
+                <div class="update-mssg"></div>
+            </form>
+
+        </div>
+
+        
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/date-fns/1.30.1/date_fns.min.js"></script>
+        <script src="https://www.gstatic.com/firebasejs/7.17.1/firebase-app.js"></script>
+        <script src="https://www.gstatic.com/firebasejs/7.17.1/firebase-firestore.js"></script>
+        <script src="https://www.gstatic.com/firebasejs/7.17.1/firebase-analytics.js"></script>
+        <script>
+            var firebaseConfig = {
+                apiKey: "AIzaSyDb6_a03x-neFW03EYImuiFpekbmpUVCVQ",
+                authDomain: "realtime-chatroom-23e2b.firebaseapp.com",
+                databaseURL: "https://realtime-chatroom-23e2b.firebaseio.com",
+                projectId: "realtime-chatroom-23e2b",
+                storageBucket: "realtime-chatroom-23e2b.appspot.com",
+                messagingSenderId: "856591324753",
+                appId: "1:856591324753:web:1d8f916860e224c5bd4a70",
+                measurementId: "G-9WH8PC8TRF"
+            };
+            // Initialize Firebase
+            firebase.initializeApp(firebaseConfig);
+            firebase.analytics();
+            const db = firebase.firestore();
+        </script>
+
+        <script src="scripts/chatroom.js"></script>
+        <script src="scripts/app.js"></script>
+        <script src="scripts/ui.js"></script>
+    </body>
+</html>
