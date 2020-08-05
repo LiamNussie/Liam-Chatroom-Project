@@ -34,3 +34,9 @@ h1,
 .highlight {
     background-color: rgb(97, 97, 202);
 }
+
+/* @media only screen and (min-width: 375px) {
+    .bottom-btns {
+        margin-top: 50px;
+    }
+} */
